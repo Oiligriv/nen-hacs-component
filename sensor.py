@@ -67,6 +67,13 @@ ELECTRICITY_SENSORS: tuple[NenSensorDescription, ...] = (
         value_fn=lambda sub: sub.get("contract", {}).get("monthly_rate"),
     ),
     NenSensorDescription(
+        key="ee_contract_renewal_date",
+        name="Contract Renewal Date",
+        device_class=SensorDeviceClass.DATE,
+        utility="EE",
+        value_fn=lambda sub: sub.get("contract", {}).get("end_date"),
+    ),
+    NenSensorDescription(
         key="ee_unit_price",
         name="Unit Price",
         state_class=SensorStateClass.MEASUREMENT,
@@ -106,6 +113,13 @@ GAS_SENSORS: tuple[NenSensorDescription, ...] = (
         suggested_display_precision=2,
         utility="GA",
         value_fn=lambda sub: sub.get("contract", {}).get("monthly_rate"),
+    ),
+    NenSensorDescription(
+        key="ga_contract_renewal_date",
+        name="Contract Renewal Date",
+        device_class=SensorDeviceClass.DATE,
+        utility="GA",
+        value_fn=lambda sub: sub.get("contract", {}).get("end_date"),
     ),
     NenSensorDescription(
         key="ga_unit_price",

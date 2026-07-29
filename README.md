@@ -18,6 +18,7 @@ This integration polls NeN's API every 6 hours and exposes sensors for electrici
 | Last Day Consumption | Latest smart meter daily reading (electricity only) | kWh |
 | Last Month Consumption | Latest distributor monthly reading (gas only) | m³ |
 | Monthly Rate | Current monthly subscription fee | EUR |
+| Contract Renewal Date | Date the current contract/rate lock ends | date |
 | Unit Price | Current commodity unit price | EUR/kWh or EUR/m³ |
 
 ## Requirements
@@ -62,7 +63,7 @@ YTD sensors are useful for detecting anomalies or validating billing accuracy.
 ## Roadmap / TODO
 
 - [ ] **Il Robo integration**: NeN's AI-based consumption optimization feature (`isRoboActive` field). The author does not have this feature enabled. Pull requests welcome from users who do.
-- [ ] Contract renewal date sensor
+- [x] Contract renewal date sensor
 
 ## Disclaimer
 
